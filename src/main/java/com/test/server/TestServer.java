@@ -31,7 +31,7 @@ import com.jfx.net.JFXServer;
 public class TestServer {
 
     static {
-        System.setProperty("jfx_server_host", "192.168.1.160");
+        System.setProperty("jfx_server_host", Config.ApplicationHost);
     }
 
     public static LinkedBlockingQueue<String> cache = new LinkedBlockingQueue<String>();

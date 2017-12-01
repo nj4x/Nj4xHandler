@@ -53,9 +53,7 @@ public class Nj4xHandler implements Runnable{
         strategy.setReconnect(false);
         boolean pwdError = false;
         try{
-//            String termServerHost = "127.0.0.1";
-            String termServerHost = "192.168.1.171";//my VM
-            strategy.connect(termServerHost, 7788, new Broker(broker), mt4Num, passwd);
+            strategy.connect(Config.TerminalServerHost, 7788, new Broker(broker), mt4Num, passwd);
             for (String s: strategy.getSymbols()) strategy.symbolSelect(s, false);//just to make mt4 use less CPU
             while(isWhile){
                 try{
